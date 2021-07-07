@@ -1,5 +1,4 @@
 
-
 public class EX04_06_GarbageEx {
 
 	public static void main(String[] args) {

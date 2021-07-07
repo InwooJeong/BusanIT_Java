@@ -1,5 +1,4 @@
 
-
 public class EX04_04_ArrayParameter {
 	static void replaceSpace(char a[]) {
 		for(int i=0;i<a.length;i++) {

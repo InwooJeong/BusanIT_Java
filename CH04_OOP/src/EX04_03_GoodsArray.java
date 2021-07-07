@@ -1,14 +1,13 @@
-
 import java.util.*;
 
-class Goods{
+class Goods2{
 	private String name;
 	private int price;
 	private int numberOfStock;
 	private int sold;
 	
-	Goods(String n, int p, int nStock, int s){
-		name = n;
+	Goods2(String n, int p, int nStock, int s){
+		this.name = n; //À§¿¡²¨ / ³»²¨
 		price = p;
 		numberOfStock = nStock;
 		sold = s;
@@ -23,8 +22,8 @@ class Goods{
 public class EX04_03_GoodsArray {
 	
 	public static void main(String[] args) {
-		Goods [] goodsArray;
-		goodsArray = new Goods [3];
+		Goods2 [] goodsArray;
+		goodsArray = new Goods2 [3];
 		
 		Scanner s = new Scanner(System.in);
 		
@@ -34,7 +33,7 @@ public class EX04_03_GoodsArray {
 			int n = s.nextInt();
 			int sold = s.nextInt();
 			
-			goodsArray[i] = new Goods(name, price, n , sold);
+			goodsArray[i] = new Goods2(name, price, n , sold);
 		}
 		
 		for(int i=0;i<goodsArray.length;i++) {

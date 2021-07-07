@@ -1,5 +1,4 @@
 
-
 public class EX04_05_book {
 	String title;
 	String author;
