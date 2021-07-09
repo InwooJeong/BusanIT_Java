@@ -39,7 +39,7 @@ class Person{
 	
 }
 
-public class Ex04_Test {
+public class EX04_Test {
 
 	public static void main(String[] args) {
 		//2.클래스 사용, 3.객체 만들기
