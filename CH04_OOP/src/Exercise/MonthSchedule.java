@@ -26,7 +26,6 @@ public class MonthSchedule {
 		System.out.println("할일(빈칸없이입력)?");
 		String work = sc.next();
 		
-		
 		this.day[day].set(work);
 	}
 	
@@ -56,7 +55,7 @@ public class MonthSchedule {
 		System.out.println("이번달 스케쥴 관리 프로그램.");
 		
 		while(true) {
-			System.out.println("할일(입력:1, 보기:2, 끝내기:3)");
+			System.out.print("할일(입력:1, 보기:2, 끝내기:3)");
 			int n = sc.nextInt();
 
 			switch(n) {
