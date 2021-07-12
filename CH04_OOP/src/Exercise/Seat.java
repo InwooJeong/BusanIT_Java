@@ -2,11 +2,15 @@ package Exercise;
 import java.util.*;
 
 public class Seat {
-	private String[] s,a,b = new String[10];
+	private String[] s,a,b;
 	Scanner sc = new Scanner(System.in);
 	
 	Seat() {
-		for(int i=0;i<s.length;i++) { //좌석 예약 안됐을 시 ---
+		s = new String [10];
+		a = new String [10];
+		b = new String [10];
+		
+		for(int i=0;i<s.length;i++) {
 			s[i]="---";
 			a[i]="---";
 			b[i]="---";
@@ -21,7 +25,7 @@ public class Seat {
 		System.out.println();
 	}
 	
-	void allSeat(String seat[]) { //조회 메서드 좌석 (전체)
+	void allSeat() { //조회 메서드 좌석 (전체)
 		System.out.print("S>>");
 		Seat.oneSeat(s);
 		System.out.print("A>>");
@@ -44,6 +48,7 @@ public class Seat {
 				break;
 			}else {
 				System.out.println("좌석을 확인하세요!");
+				break;
 			}
 		}
 	}
@@ -84,6 +89,9 @@ public class Seat {
 		for(int i=0;i<seat.length;i++) {
 			if(name.equals(seat[i])) {
 				seat[i] = "---";
+			}else {
+				System.out.println("성함을 확인하세요!");
+				break;
 			}
 		}
 	}
