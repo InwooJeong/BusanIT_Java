@@ -22,6 +22,7 @@ public class GoodsArray {
 			
 			goodsArray[i] = new Goods(name,p,n,s);
 			
+			sc.close();
 		}
 	}
 	

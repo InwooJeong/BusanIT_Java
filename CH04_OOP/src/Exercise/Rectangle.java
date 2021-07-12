@@ -22,6 +22,13 @@ public class Rectangle {
 		System.out.println("("+x+","+y+")에서 크기가 "+width+"X"+height+"인 사각형");
 	}
 	
-	
+	boolean contains(Rectangle r) {
+		if((x<r.x)&&((width+x)>(r.width+r.x))&&
+			(y<r.y)&&((height+y)>(r.height+r.y))) {
+			return true;
+		}else {
+			return false;
+		}
+	}
 
 }
