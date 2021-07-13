@@ -37,8 +37,8 @@ public class DB {
 			while(rs.next()) {
 				System.out.print("\t"+rs.getInt(1));
 				System.out.print("\t"+rs.getString(2));
-				System.out.print("\t\t"+rs.getString(3));
-				System.out.println("\t\t\t"+rs.getInt(4));
+				System.out.print("\t\t\t"+rs.getString(3));
+				System.out.println("\t\t\t\t"+rs.getInt(4));
 			}
 			
 			//con.close();
