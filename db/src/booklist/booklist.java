@@ -1,6 +1,6 @@
 package booklist;
 
-public class booklist {
+public class Booklist {
 	
 	public static void main(String args[]) {
 		DB so = new DB();
