@@ -4,6 +4,9 @@ import java.util.*;
 public class DicApp {
 	
 	DicApp(){
+	
+	}
+	void search() {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("한영 단어 검색 프로그램(종료 시 그만) >>");
 		
@@ -21,5 +24,6 @@ public class DicApp {
 				System.out.println(eng);
 			}
 		}
+		sc.close();
 	}
 }
