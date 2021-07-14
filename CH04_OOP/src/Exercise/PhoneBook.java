@@ -2,6 +2,7 @@ package Exercise;
 import java.util.*;
 
 class PhoneBook {
+	Scanner sc = new Scanner(System.in);
 	
 	PhoneBook(){
 		
@@ -9,7 +10,6 @@ class PhoneBook {
 	
 	public void show(){
 		
-		Scanner sc = new Scanner(System.in);
 		System.out.println("ÀÎ¿ø¼ö>>");
 		int n = sc.nextInt();
 		int i;

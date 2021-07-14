@@ -2,6 +2,7 @@ package Exercise;
 import java.util.*;
 
 public class Cal {
+	Scanner sc = new Scanner(System.in);
 	
 	Cal(){
 		
@@ -11,7 +12,6 @@ public class Cal {
 		
 		while(true) {
 			System.out.print("두 정수와 연산자를 입력하시오(+,-,*,/) 종료 시 연산자에 그만 >>");
-			Scanner sc = new Scanner(System.in);
 			int a = sc.nextInt();
 			int b = sc.nextInt();
 			String c = sc.next();
