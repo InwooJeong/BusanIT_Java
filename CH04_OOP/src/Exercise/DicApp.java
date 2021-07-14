@@ -8,7 +8,7 @@ public class DicApp {
 	}
 	void search() {
 		Scanner sc = new Scanner(System.in);
-		System.out.println("한영 단어 검색 프로그램(종료 시 그만) >>");
+		System.out.println("한영 단어 검색 프로그램>>");
 		
 		while(true) {
 			System.out.println("한글 단어?(종료 시 그만)>>");
