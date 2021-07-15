@@ -89,8 +89,8 @@ public class DB {
 			}
 			
 			//System.out.println(bList);
-			for(int i=0;i<bList.size();i++) {
-				System.out.println(bList.get(i));
+			for(BookDTO bdto : bList) {
+				System.out.println(bdto);
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
