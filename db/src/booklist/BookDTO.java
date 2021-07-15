@@ -40,6 +40,7 @@ public class BookDTO {
 	public void setPublisher(String publisher) {
 		this.publisher = publisher;
 	}
+	
 	@Override
 	public String toString() {
 		return bookid +"\t\t"+ bookname +"\t\t"+ publisher +"\t\t\t"+ price ;
