@@ -1,13 +1,15 @@
 package booklist;
 
 import java.sql.*;
+import java.util.*;
 
 public class DB {
 	Connection con;
 	Statement stmt;
 	ResultSet rs;
 	
-	public DB() {
+	//public DB() {
+	public void getCon() {
 		String url = "jdbc:oracle:thin:@localhost:1521:xe";
 		String userid = "madang";
 		String pwd = "madang";
@@ -28,6 +30,7 @@ public class DB {
 		}
 	}
 	
+	
 	void sqlRun() {
 		String query = "SELECT * FROM Book";
 		try {
@@ -40,7 +43,6 @@ public class DB {
 				System.out.print("\t\t\t"+rs.getString(3));
 				System.out.println("\t\t\t\t"+rs.getInt(4));
 			}
-			
 			//con.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -60,12 +62,41 @@ public class DB {
 				System.out.print("\t\t"+rs.getString(3));
 				System.out.println("\t"+rs.getString(4));
 			}
-			
-			con.close();
+			//con.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 	}
 	
+	ArrayList<BookDTO> bList(){
+		ArrayList<BookDTO> bList = null;
+		
+		String query = "SELECT * FROM book";
+		
+		try {
+			stmt = con.createStatement();
+			rs = stmt.executeQuery(query);
+			System.out.println("Book NO \tBOOK NAME \t\tPUBLISHER \t\tPRICE");
+			bList = new ArrayList<BookDTO>();
+			while(rs.next()) {
+				BookDTO bdto = new BookDTO();
+				
+				bdto.setBookid(rs.getInt(1));
+				bdto.setBookname(rs.getString(2));
+				bdto.setPublisher(rs.getString(3));
+				bdto.setPrice(rs.getInt(4));
+				bList.add(bdto);
+			}
+			
+			//System.out.println(bList);
+			for(int i=0;i<bList.size();i++) {
+				System.out.println(bList.get(i));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return bList;
+	}
 	
 }	
